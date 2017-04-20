@@ -1,0 +1,18 @@
+<div ng-show="item.price" class="item item-thumbnail-left">
+  <img src="{{ item.images.list }}" />
+  <h3 class="name">{{ item.name }}</h3>
+  <h4 class="des">{{ item.subtitle }}</h4>
+  <h4><span class="hint">超值特惠</span></h4>
+  <h4 class="price">可用券价<span>{{ item.price / 100 }}</span></h4>
+  <div class="price-num">
+ 	<p class="vip-price">
+ 		安心会员价￥<span>{{ item.vip_price / 100 }}</span>
+ 	</p>
+ 	<p class="cal">
+	 	<span ng-show="item.num" ng-click="minus(item)" class="minus">-</span>
+	 	<span ng-show="item.num">{{ item.num }}</span>
+	 	<span ng-show="!(item.num)" ng-click="plus(item)" class="gouwuche"><i class="iconfont icon-gouwuche"></i></span>
+	 	<span ng-show="item.num" ng-click="plus(item)" class="plus">+</span>
+ 	</p>
+  </div>
+</div>

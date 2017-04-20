@@ -1,0 +1,22 @@
+<div class="bar bar-header bar-light">
+  <h1 class="title"><img src="/src/imgs/header-pic.png" alt="全国送"></h1>
+  <ul id="header_nav">
+	<li ng-repeat="item in list" ng-click="headerMark($index)">{{ item.txt }}</li>
+  </ul>
+</div>
+<ion-content class="has-header has-subheader has-footer">
+	<ion-slide-box on-slide-changed="changed(index)" slide-interval="1000" auto-play="false" does-continue="true" >
+	  <ion-slide>
+	    <div class="box blue"><h1>BLUE</h1></div>
+	  </ion-slide>
+	  <ion-slide>
+	    <div class="box yellow"><h1>YELLOW</h1></div>
+	  </ion-slide>
+	  <ion-slide on-slide-changed="slideHasChanged(index)">
+	    <div class="box pink"><h1>PINK</h1></div>
+	  </ion-slide>
+	</ion-slide-box>
+	<div class="list">
+	    <single-cart ng-repeat="item in list" data="item"></single-cart>
+	</div>
+</ion-content>

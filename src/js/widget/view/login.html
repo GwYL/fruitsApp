@@ -1,0 +1,29 @@
+<div class="modal" ng-controller="loginCtrl">
+	<div class="bar bar-header bar-light">
+		<button ng-click="hide()" class="button button-clear">
+		  返回
+		</button>
+	</div>
+
+	<ion-content class="has-header has-subheader">
+		<div class="list">  
+
+		  <div class="item item-input-inset">
+		    <label class="item-input-wrapper">
+		      <input type="text" ng-model="userInfo.phone" placeholder="请输入手机号码">
+		    </label>
+		    <button ng-click="sendCode()" class="button button-small code-btn">
+		      获取验证码
+		    </button>
+		  </div>
+
+		  <div class="item item-input-inset">
+		    <label class="item-input-wrapper">
+		      <input ng-model="userInfo.code" type="text" placeholder="验证码">
+		    </label>
+		  </div>
+		  <button ng-click="submit()" class="button button-full button-positive">登录</button>
+		</div>
+	</ion-content>
+
+</div>
